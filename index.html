@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        SCMPREMIER Discovery Experience
+    </title>
+
+    <!-- CSS -->
+
+   <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/dashboard.css">
+    <link rel="stylesheet" href="css/pages/memory.css">
+    <link rel="stylesheet" href="css/pages/mission-complete.css">
+    <link rel="stylesheet" href="css/pages/mission-failed.css">
+    <link rel="stylesheet" href="css/pages/product.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- ====================================================== -->
+<!-- DASHBOARD -->
+<!-- ====================================================== -->
+
+<section
+    id="dashboard-screen"
+    class="screen active">
+
+    <div class="dashboard">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="logo-group">
+
+                <div class="logo-circle">
+
+                    <img
+                class="scmo-avatar"
+                src="assets/scmp_logo.webp"
+                alt="SCMO">
+
+                </div>
+
+                <div>
+
+                    <h2>
+
+                        SCMPREMIER
+                    </h2>
+
+                    <span>
+
+                        Discovery Experience
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="level-card">
+
+                <span>
+
+                    Lv.1
+
+                </span>
+
+                <strong>
+
+                    Explorer
+
+                </strong>
+
+            </div>
+
+        </header>
+
+        <!-- Welcome Card -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-text">
+
+                <h1>
+
+                    Welcome Explorer 👋
+
+                </h1>
+
+                <p>
+
+                    Complete today's discovery mission and unlock exclusive rewards.
+
+                </p>
+
+            </div>
+
+            <div class="assistant-avatar">
+
+                <img
+                class="scmo-avatar"
+                src="assets/scmo/welcome.webp"
+                alt="SCMO">
+
+            </div>
+
+        </section>
+
+        <!-- Mission Card -->
+
+        <section class="mission-card">
+
+            <div class="mission-info">
+
+                <span class="mission-label">
+
+                    TODAY'S MISSION
+
+                </span>
+
+                <h2>
+
+                    Product Discovery
+
+                </h2>
+
+                <p>
+
+                    Match all 6 products before the timer reaches zero.
+
+                </p>
+
+            </div>
+
+            <button
+                id="btn-start-mission"
+                class="primary-button">
+
+                Start Mission
+
+            </button>
+
+        </section>
+        <!-- Progress -->
+    <div class="dashboard-bottom">
+
+        <section class="progress-card">
+
+            <div class="progress-header">
+
+                <h3>
+                    Today's Progress
+                </h3>
+
+                <span id="progress-percent">
+                    0%
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progress-fill">
+
+                </div>
+
+            </div>
+
+            <div class="progress-items">
+
+                <div class="progress-item">
+
+                    <strong id="dashboard-discoveries">
+
+                        0
+
+                    </strong>
+
+                    <span>
+
+                        Discoveries
+
+                    </span>
+
+                </div>
+
+                <div class="progress-item">
+
+                    <strong>
+
+                        6
+
+                    </strong>
+
+                    <span>
+
+                        Products
+
+                    </span>
+
+                </div>
+
+                <div class="progress-item">
+
+                    <strong>
+
+                        Lv.1
+
+                    </strong>
+
+                    <span>
+
+                        Explorer
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Reward Preview -->
+
+        <section class="reward-preview">
+
+            <div class="reward-icon">
+
+                🎁
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Mission Reward
+
+                </h3>
+
+                <p>
+
+                    Complete today's mission to unlock your exclusive reward.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- MEMORY MISSION -->
+<!-- ====================================================== -->
+
+<section
+    id="memory-screen"
+    class="screen">
+
+    <div class="page">
+
+        <header class="game-header">
+
+            <div class="counter">
+
+                <span class="counter-label">
+
+                    Time
+
+                </span>
+
+                <span
+                    id="timer"
+                    class="counter-value">
+
+                    30
+
+                </span>
+
+            </div>
+
+            <div class="counter">
+
+                <span class="counter-label">
+
+                    Discoveries
+
+                </span>
+
+                <span
+                    id="discoveries-count"
+                    class="counter-value">
+
+                    0 / 6
+
+                </span>
+
+            </div>
+
+            <div class="counter">
+
+                <span class="counter-label">
+
+                    Attempts
+
+                </span>
+
+                <span
+                    id="attempt-count"
+                    class="counter-value">
+
+                    0
+
+                </span>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <div
+                id="memory-grid"
+                class="memory-grid">
+
+            </div>
+
+        </main>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- MISSION COMPLETE -->
+<!-- ====================================================== -->
+
+<section
+    id="mission-complete-screen"
+    class="screen">
+
+    <div class="page">
+
+        <div class="mission-complete-card">
+
+    <div class="mission-icon">
+        🎉
+    </div>
+
+    <h1>
+        Discovery Complete
+    </h1>
+
+    <p class="mission-subtitle">
+        You've completed today's discovery.
+    </p>
+
+    <div class="mission-stats">
+
+        <div class="mission-stat">
+
+            <span class="label">
+                ⏱ Time
+            </span>
+
+            <span id="result-time" class="value">
+                18 s
+            </span>
+
+        </div>
+
+        <div class="mission-stat">
+
+            <span class="label">
+                🎯 Attempts
+            </span>
+
+            <span id="result-attempts" class="value">
+                0
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="xp-title">
+        XP Earned
+    </div>
+
+    <div class="xp-reward">
+
+        +100 XP
+
+    </div>
+
+    <button
+        id="continue-btn"
+        class="primary-button">
+
+        Continue
+
+    </button>
+
+</div>
+
+    </div>
+
+</section>
+
+<section
+    id="mission-failed-screen"
+    class="screen">
+
+    <div class="page">
+
+        <div class="mission-failed-card">
+
+            <div class="mission-icon">
+                ⏰
+            </div>
+
+            <h1>Almost There!</h1>
+
+            <p class="failed-subtitle">
+              You almost completed today's discovery.
+              <br>
+              Try one more time.
+            </p>
+
+            <button
+                id="retry-btn"
+                class="primary-button">
+
+                Play Again
+
+            </button>
+
+            <div class="scmo-placeholder"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- TODAY'S DISCOVERIES -->
+<!-- ====================================================== -->
+
+<section
+    id="discoveries-screen"
+    class="screen">
+
+    <div class="page">
+
+        <header class="page-header">
+
+            <h2>
+
+                Today's Discoveries
+
+            </h2>
+
+            <p>
+
+                Products you've discovered today.
+
+            </p>
+
+        </header>
+
+        <div
+            id="discoveries-list"
+            class="discoveries-list">
+
+            <!-- JS Render -->
+
+        </div>
+
+        <button
+            id="btn-view-product"
+            class="primary-button">
+
+            View Product
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- PRODUCT DETAIL -->
+<!-- ====================================================== -->
+
+<section
+    id="product-screen"
+    class="screen">
+
+    <div class="page">
+
+        <div class="product-scmo">
+
+        <img
+        src="assets/scmo/success.webp"
+        class="product-scmo-image"
+        alt="SCMO">
+
+        </div>
+
+        <div
+            id="product-image"
+            class="product-image">
+
+        </div>
+
+        <div class="product-info">
+
+            <span class="badge badge-success">
+
+                DISCOVERED
+
+            </span>
+
+            <h2 id="product-name">
+
+                Product Name
+
+            </h2>
+
+            <p id="product-description">
+
+                Product Description
+
+            </p>
+
+        </div>
+
+        <button
+            id="btn-reward"
+            class="primary-button">
+
+            Claim Reward
+
+        </button>
+
+    </div>
+
+</section>
+<!-- ====================================================== -->
+<!-- REWARD -->
+<!-- ====================================================== -->
+
+<section
+    id="reward-screen"
+    class="screen">
+
+    <div class="page">
+
+        <div class="reward-content">
+
+            <div class="reward-icon-large">
+
+                🏆
+
+            </div>
+
+            <h1>
+
+                Mission Complete!
+
+            </h1>
+
+            <p>
+
+                Congratulations!
+                You have successfully completed today's discovery mission.
+
+            </p>
+
+            <div class="reward-card">
+
+                <h3>
+
+                    Your Reward
+
+                </h3>
+
+                <p id="reward-name">
+
+                    Premium Discovery Badge
+
+                </p>
+
+            </div>
+
+            <button
+                id="btn-finish"
+                class="primary-button">
+
+                Finish
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- MISSION FAILED -->
+<!-- ====================================================== -->
+
+<section
+    id="failed-screen"
+    class="screen">
+
+    <div class="page">
+
+        <div class="reward-content">
+
+            <div class="reward-icon-large">
+
+                ⏰
+
+            </div>
+
+            <h1>
+
+                Mission Failed
+
+            </h1>
+
+            <p>
+
+                Time has expired.
+                Please try again.
+
+            </p>
+
+            <button
+                id="btn-retry"
+                class="primary-button">
+
+                Retry Mission
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- GLOBAL MODAL -->
+<!-- ====================================================== -->
+
+<div
+    id="global-modal"
+    class="modal hidden">
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-content">
+
+        <h2 id="modal-title">
+
+            Notification
+
+        </h2>
+
+        <p id="modal-message">
+
+            Message
+
+        </p>
+
+        <button
+            id="modal-button"
+            class="primary-button">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- LOADING OVERLAY -->
+<!-- ====================================================== -->
+
+<div
+    id="loading-overlay"
+    class="loading-overlay hidden">
+
+    <div class="loader"></div>
+
+    <p>
+
+        Preparing Mission...
+
+    </p>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- AUDIO -->
+<!-- ====================================================== -->
+
+<audio
+    id="flip-sound"
+    preload="auto">
+
+</audio>
+
+<audio
+    id="match-sound"
+    preload="auto">
+
+</audio>
+
+<audio
+    id="success-sound"
+    preload="auto">
+
+</audio>
+
+<audio
+    id="fail-sound"
+    preload="auto">
+
+</audio>
+<!-- ====================================================== -->
+<!-- TOAST -->
+<!-- ====================================================== -->
+
+<div
+    id="toast"
+    class="toast hidden">
+
+    <span id="toast-text">
+
+        Notification
+
+    </span>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- FLOATING XP -->
+<!-- ====================================================== -->
+
+<div
+    id="xp-popup"
+    class="xp-popup hidden">
+
+    +100 XP
+
+</div>
+
+<!-- ====================================================== -->
+<!-- PARTICLE LAYER -->
+<!-- ====================================================== -->
+
+<div
+    id="particle-layer">
+
+</div>
+
+<!-- ====================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ====================================================== -->
+
+<!-- <script src="data/products.js"></script> -->
+
+<script src="js/state.js"></script>
+
+<script src="js/router.js"></script>
+
+<script src="js/app.js"></script>
+
+<!-- ====================================================== -->
+<!-- PRELOAD IMAGES -->
+<!-- ====================================================== -->
+
+<!--
+
+<div style="display:none;">
+
+    <img src="assets/images/card-back.png">
+
+    ...
+
+</div>
+
+-->
+
+<!-- ====================================================== -->
+<!-- GLOBAL EFFECTS -->
+<!-- ====================================================== -->
+
+<div
+    id="confetti-layer">
+
+</div>
+
+<div
+    id="sparkle-layer">
+
+</div>
+
+<div
+    id="overlay-layer">
+
+</div>
+
+<!-- ====================================================== -->
+<!-- END APPLICATION -->
+<!-- ====================================================== -->
+
+</div>
+<!-- ====================================================== -->
+<!-- END SCRIPT -->
+<!-- ====================================================== -->
+
+</body>
+
+</html>
