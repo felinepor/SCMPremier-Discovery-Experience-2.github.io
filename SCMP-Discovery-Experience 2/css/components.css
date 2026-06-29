@@ -1,0 +1,148 @@
+/*
+====================================================
+
+SCMPremier Discovery Experience
+Build 0.5.2
+
+File
+components.css
+
+Description
+Reusable UI Components
+
+====================================================
+*/
+
+/*==================================================
+Primary Button
+==================================================*/
+
+.primary-button{
+
+    width:100%;
+
+    height:64px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        135deg,
+        #6C63FF,
+        #2BA7FF
+    );
+
+    transition:.25s;
+
+}
+
+.primary-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.primary-button:active{
+
+    transform:scale(.98);
+
+}
+
+.primary-button:hover{
+
+    background:var(--color-primary-dark);
+
+}
+
+.primary-button:active{
+
+    transform:scale(.98);
+
+}
+
+/*==================================================
+Card
+==================================================*/
+
+.card{
+
+    background:var(--color-surface);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-md);
+
+    padding:20px;
+
+}
+
+/*==================================================
+Badge
+==================================================*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:6px 12px;
+
+    border-radius:var(--radius-round);
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.badge-success{
+
+    background:var(--color-success);
+
+    color:var(--color-white);
+
+}
+
+/*==================================================
+Counter
+==================================================*/
+
+.counter{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:4px;
+
+}
+
+.counter-label{
+
+    font-size:12px;
+
+    color:var(--color-text-light);
+
+}
+
+.counter-value{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
